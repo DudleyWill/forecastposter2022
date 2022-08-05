@@ -27,6 +27,7 @@ fName = "van20all.xlsx"
 van20all,time_plot = readdata(fName)
 header_container = st.container()
 historical_container = st.container()
+conclusion_container = st.container()
 
 def graphs20 (thi,section):
     fig1 = px.scatter(van20all, x='date', y='hour', color=thi,
@@ -146,3 +147,10 @@ with historical_container:
             st.write(
                 'Shows the hourly variation of temperature hunmidity index which is used to estimate the level of heat stress expereinced by '
                 'chickens in section 4 of the poultry house')
+
+with conclusion_container:
+    st.write('Improving the thermal performance of the building may not be sufficient to reduce'
+             ' the number of hours spent in severe THI conditions. Methods that can '
+             'reduce the temperature of the air without being energyintensive '
+             'are needed to address the heat stress problems'
+             'of small farmers. Based')
