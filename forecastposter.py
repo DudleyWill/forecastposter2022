@@ -116,33 +116,34 @@ with header_container:
             "High School in Clarendon Jamaica")
 
 with method_container:
-    st.header('Experimental setup')
-    cola, colb =st.columns(2)
-    with cola:
-        st.write('A typical open ventilated poultry house, made of galvanized zinc roof, timber framing and meshed sides '
-                 'was chosen as the test site. Measuring instruments were installed inside to record temperature and humidity, '
-                 'along with an external weather station. Baseline data was collected in 2019. A radiant barrier was '
-                 'installed in the ceiling of one section of the poultry house in 2020, to reduce heat ingress from the '
-                 ' zinc roof. The Temperature Humidity Index (THI) was used to assess the thermal comfort of the '
-                 'broiler chickens using Eqn.1 and the following THI classifications: no stress < 26, heat-stressed'
-                 '26-29 and severely stressed > 30 [2]. The project also explored nighttime radiative cooling by '
-                 ' modifying a solar water heater to reduce the temperature of 30 gallons of water during the night '
-                 'with a 3W circulating pump. This experiment was conducted at the Department of Physics of the '
-                 'University of the West Indies, Mona Campus. Eqn.1 THI = 0.85 ∗ T_drybulb + 0.15 ∗ T_wetbulb')
-    with colb:
-        image4 = loadimage('inside.jpg')
-        st.image(image4,caption='Radiant barrier installed in section 3 of the Poultry house. Direct sunlight heats'
-                                ' up the floor on the left side in the morning focusing the chickens to migrate to '
-                                ' the other side')
+    with st.expander('Experimental setup'):
+
+        cola, colb =st.columns(2)
+        with cola:
+            st.write('A typical open ventilated poultry house, made of galvanized zinc roof, timber framing and meshed sides '
+                     'was chosen as the test site. Measuring instruments were installed inside to record temperature and humidity, '
+                     'along with an external weather station. Baseline data was collected in 2019. A radiant barrier was '
+                     'installed in the ceiling of one section of the poultry house in 2020, to reduce heat ingress from the '
+                     ' zinc roof. The Temperature Humidity Index (THI) was used to assess the thermal comfort of the '
+                     'broiler chickens using Eqn.1 and the following THI classifications: no stress < 26, heat-stressed'
+                     '26-29 and severely stressed > 30 [2]. The project also explored nighttime radiative cooling by '
+                     ' modifying a solar water heater to reduce the temperature of 30 gallons of water during the night '
+                     'with a 3W circulating pump. This experiment was conducted at the Department of Physics of the '
+                     'University of the West Indies, Mona Campus. Eqn.1 THI = 0.85 ∗ T_drybulb + 0.15 ∗ T_wetbulb')
+        with colb:
+            image4 = loadimage('inside.jpg')
+            st.image(image4,caption='Radiant barrier installed in section 3 of the Poultry house. Direct sunlight heats'
+                                    ' up the floor on the left side in the morning focusing the chickens to migrate to '
+                                    ' the other side')
 
 with historical_container:
     with st.expander(" Results"):
-        graphs = st.radio("Interactive graphs ",
+        graphs = st.radio(" ",
                           ('Section 4 compared with outdoor',
                            'Section 3 compared with outdoor',
                            'Section 3 hourly THI',
                            'Section 4 hourly THI',
-                           'chicken mortality stats')
+                           'Chicken mortality stats')
                           ,horizontal=True)
         if graphs =='Section 4 compared with outdoor':
             fig = timeseries('Section4', 's4out')
@@ -176,8 +177,9 @@ with historical_container:
 
 with conclusion_container:
     with st.expander('Conclusion'):
-        st.write('The introduction of the radiant barrier reduced mortality rates for the study period'
-                     ' Improving the thermal performance of the building may not be sufficient to reduce'
+        st.write('The radiant Barrier reduced convective and radiative  heating inside the Poultry farm. '
+                 'The section with the radiant barrier was on average 2 \N{DEGREE SIGN} C lower that the other sections.  '
+                 'Improving the thermal performance of the building may not be sufficient to reduce'
                  ' the number of hours spent in severe THI conditions. Methods that can '
                  'reduce the temperature of the air without being energy intensive '
                  'are needed to address the heat stress problems '
