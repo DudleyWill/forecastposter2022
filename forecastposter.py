@@ -149,8 +149,9 @@ with historical_container:
                 'chickens in section 4 of the poultry house')
 
 with conclusion_container:
-    st.write('Improving the thermal performance of the building may not be sufficient to reduce'
-             ' the number of hours spent in severe THI conditions. Methods that can '
-             'reduce the temperature of the air without being energyintensive '
-             'are needed to address the heat stress problems'
-             'of small farmers. Based')
+    with st.expander('Conclusion'):
+        st.write('Improving the thermal performance of the building may not be sufficient to reduce'
+                 ' the number of hours spent in severe THI conditions. Methods that can '
+                 'reduce the temperature of the air without being energyintensive '
+                 'are needed to address the heat stress problems'
+                 'of small farmers. Based')
