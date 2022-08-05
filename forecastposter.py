@@ -9,7 +9,7 @@ import glob
 import plotly.express as px
 
 # st.set_page_config(age_title='heat-stressed-poultry')
-# st.set_page_config(layout="wide")
+st.set_page_config(layout="wide")
 
 @st.cache
 def readdata(file):
