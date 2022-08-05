@@ -150,8 +150,15 @@ with historical_container:
 
 with conclusion_container:
     with st.expander('Conclusion'):
-        st.write('Improving the thermal performance of the building may not be sufficient to reduce'
+        col1, col2 = st.columns(2)
+        with col2:
+            st.write('The introduction of the radiant barrier reduced mortality rates for the study period'
+                     ' Improving the thermal performance of the building may not be sufficient to reduce'
                  ' the number of hours spent in severe THI conditions. Methods that can '
-                 'reduce the temperature of the air without being energyintensive '
-                 'are needed to address the heat stress problems'
+                 'reduce the temperature of the air without being energy intensive '
+                 'are needed to address the heat stress problems '
                  'of small farmers. Based')
+
+        with col1:
+            image1 = loadimage('chickendeath.png')
+            st.image(image1)
