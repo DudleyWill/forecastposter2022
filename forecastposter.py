@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import glob
 import plotly.express as px
 
-st.beta_set_page_config(age_title='heat-stressed-poultry')
+st.set_page_config(age_title='heat-stressed-poultry')
 st.set_page_config(layout="wide")
 
 @st.cache
