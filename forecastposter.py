@@ -141,8 +141,8 @@ with historical_container:
         graphs = st.radio(" ",
                           ('Section 4 compared with outdoor',
                            'Section 3 compared with outdoor',
-                           'Section 3 hourly THI',
                            'Section 4 hourly THI',
+                           'Section 3 hourly THI',
                            'Chicken mortality stats')
                           ,horizontal=True)
         if graphs =='Section 4 compared with outdoor':
@@ -164,7 +164,7 @@ with historical_container:
             st.write(
                 'Shows the hourly variation of the temperature hunmidity index which is used to estimate the level of heat stress expereinced by '
                 'chickens in section 4 of the poultry house')
-        elif graphs =='Section 4 hourly THI':
+        elif graphs =='Section 3 hourly THI':
 
             fig = graphs20('Sec3THI', 'Section3')
             st.plotly_chart(fig, use_container_width=True)
