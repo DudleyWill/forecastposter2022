@@ -123,21 +123,22 @@ with header_container:
         st.info(
             """This project reports on work done at the Vere Technical 
             High School chicken farm in Clarendon Jamaica. This chicken farm is used to supply meat to the school's
-            canteen, whose profitability was being threaten by high mortality. The research team with funding from 
+            canteen, whose profitability was being threaten by high mortality rates. The research team with funding from 
             the Environmental Foundation of Jamaica provided assistance to the school to investigate the cause of 
             the high mortality and provide mitigation options.""")
         st.write(" ")
         st.write(
-            " The growth of livestock such as chicken is affected by "
-            "temperature as it dictates the quantity of water lost through sweating and urination. Where a large"
-            " number of livestock are kept in the same location, fans are used to control the temperature in the "
-            "building, which becomes less effective with increasing temperatures from climate change. "
-            "If a new solution is not found: there will be increase death of livestock from heat stroke,"
-            " smaller livestock in terms of body mass after the normal growing period as they lose water weight to "
-            "survive the heat." 
-            "Heat stress is the leading cause of high mortality and low production in small livestock farming in [1]"
-            "  Jamaica. Additionally, the persistent warming of the Caribbean due to climate change worsens the problem"
-            "in the sector. This paper presents a field investigation into the heat stress problem at ")
+            """ Livestock such as poultry are reared for a period of 6 weeks before reaping. Poultry require different 
+            climatic conditions to thrive based on their age. Baby chickens needs artificial heating during their week.
+            There temperature of the chicken house in the following weeks should be gradually reduced until reaping [2].
+            Large commercial poultry farms achieve this through their automated climate controls systems and use of 
+            evaporative cooling technologies to regulate the indoor climate. Small farmers do not practice this growing 
+            technique due to the high capital and operating cost which is not suitable for their small scale farms. 
+            Small farmers instead rely on natural ventilation cooling to regulate indoor climate. Farms that depend on 
+            natural ventilation are at the mercy of a climate that is changing and whose ambient temperature is 
+            increasing. The lack of control of regulate the indoor climate at will results in Heat stress being the 
+            leading cause of high mortality and low production in small livestock farming in [1].   
+            This paper presents a field investigation into the heat stress problem at local small poultry. """)
 
 with method_container:
     with st.expander('Experimental setup'):
@@ -215,5 +216,6 @@ with reference_container:
         st.write ('[1] C. Lallo et al, “Characterizing heat stress on livestock using the temperature humidity index'
               '  (THI)—prospects for a warmer Caribbean” Regional Environmental Change,'
               ' vol. 18, , pp. 2329–2340, Dec.2018.')
-        st.write('[2] O.Omomowo, F. Falayi, “Temperature-humidity index and thermal comfort of broilers in humid'
+        st.write('[2] https://www.thechickengeek.com/knowing-ideal-temperature-for-chickens/')
+        st.write('[3] O.Omomowo, F. Falayi, “Temperature-humidity index and thermal comfort of broilers in humid'
              '  tropics” CIGR, vol.23(3): pp. 101-110, Sep 2021.')
