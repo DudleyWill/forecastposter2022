@@ -181,16 +181,16 @@ with historical_container:
                  2 0\N{DEGREE SIGN} C-4 0\N{DEGREE SIGN} temperature above outdoor ambient temperature. During the night 
                  indoor temperature got as low as 21 0\N{DEGREE SIGN} C and normally achieve temperatures up to 
                  2.5 0\N{DEGREE SIGN} lower than ambient outdoor temperature. 
-                 outdoor by 5 AM.    temperature. 
-            "Note worthy, section 4 achieved lower temperatures during the night than section 3" )
+                 outdoor by 5 AM. """ )
         elif graphs=='Section 3 compared with outdoor':
 
             fig2 = timeseries('Section3', 's3out')
             st.plotly_chart(fig2, use_container_width=True)
             st.write(
-                "Compares the temperature of section 3 where the radiant barrier was installed with respect to outdoor temperatures. "
-                "Section 3 maintained a temperature difference of 0\N{DEGREE SIGN} C to 4\N{DEGREE SIGN} C in the daytime while section 4"
-                "could go as high as ~5.6\N{DEGREE SIGN} C.  ")
+                """Constrast the indoor temperature of section 3 that has the radiant barrier with outdoor temperatures.
+                 Section 3 maintained a temperature difference of 0\N{DEGREE SIGN} C to 4\N{DEGREE SIGN} C in the 
+                 daytime while section 4 went as high as ~5.6\N{DEGREE SIGN} C. Note worthy, section 4 achieved lower
+                temperatures during the night than section 3 """)
         elif graphs =='Section 4 hourly THI':
             fig = graphs20('Sec4THI', 'Section4')
             st.plotly_chart(fig, use_container_width=True)
