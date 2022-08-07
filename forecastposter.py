@@ -145,16 +145,18 @@ with method_container:
 
         cola, colb =st.columns(2)
         with cola:
-            st.write('A typical open ventilated poultry house, made of galvanized zinc roof, timber framing and meshed sides '
-                     'was chosen as the test site. Measuring instruments were installed inside to record temperature and humidity, '
-                     'along with an external weather station. Baseline data was collected in 2019. A radiant barrier was '
-                     'installed in the ceiling of one section of the poultry house in 2020, to reduce heat ingress from the '
-                     ' zinc roof. The Temperature Humidity Index (THI) was used to assess the thermal comfort of the '
-                     'broiler chickens using Eqn.1 and the following THI classifications: no stress < 26, heat-stressed'
-                     '26-29 and severely stressed > 30 [2]. The project also explored nighttime radiative cooling by '
-                     ' modifying a solar water heater to reduce the temperature of 30 gallons of water during the night '
-                     'with a 3W circulating pump. This experiment was conducted at the Department of Physics of the '
-                     'University of the West Indies, Mona Campus. Eqn.1 THI = 0.85 ∗ T_drybulb + 0.15 ∗ T_wetbulb')
+            st.write(
+                """A typical open ventilated poultry house, made of galvanized zinc roof, timber framing and meshed 
+                sides was chosen as the test site. Measuring instruments were installed inside to record temperature
+                 and humidity along with an external weather station. Baseline data was collected in 2019. 
+                 A radiant barrier was installed in the ceiling of one section of the poultry house in 2020,
+                  to reduce heat ingress from the  zinc roof. The Temperature Humidity Index (THI) was used to assess
+                   the thermal comfort of the broiler chickens using Eqn.1 and the following THI classifications: 
+                   no stress < 26, heat-stressed 26-29 and severely stressed > 30 [2]. The project also explored
+                    nighttime radiative cooling by modifying a solar water heater to reduce the temperature of
+                     30 gallons of water during the night with a 3W circulating pump. This experiment was conducted 
+                     at the Department of Physics of the University of the West Indies, Mona Campus. 
+                     Eqn.1 THI = 0.85 ∗ T_drybulb + 0.15 ∗ T_wetbulb""")
         with colb:
             image4 = loadimage('inside.jpg')
             st.image(image4,caption='Radiant barrier installed in section 3 of the Poultry house. Direct sunlight heats'
@@ -162,7 +164,7 @@ with method_container:
                                     ' the other side')
 
 with historical_container:
-    with st.expander(" Results"):
+    with st.expander(" Results for the Radiant Barrier intervention"):
         graphs = st.radio(" ",
                           ('Section 4 compared with outdoor',
                            'Section 3 compared with outdoor',
@@ -173,7 +175,13 @@ with historical_container:
         if graphs =='Section 4 compared with outdoor':
             fig = timeseries('Section4', 's4out')
             st.plotly_chart(fig, use_container_width=True)
-            st.write("Shows the temperature of inside of section 4, where no interventon was done, compared to outdoor temperature. "
+            st.write(
+                """Shows the temperature inside of section 4, where no intervention was done, compared to outdoor 
+                temperature.  Indoor temperature got as high as 38 0\N{DEGREE SIGN} C in the day and maintains a
+                 2 0\N{DEGREE SIGN} C-4 0\N{DEGREE SIGN} temperature above outdoor ambient temperature. During the night 
+                 indoor temperature got as low as 21 0\N{DEGREE SIGN} C and normally achieve temperatures up to 
+                 2.5 0\N{DEGREE SIGN} lower than ambient outdoor temperature. 
+                 outdoor by 5 AM.    temperature. 
             "Note worthy, section 4 achieved lower temperatures during the night than section 3" )
         elif graphs=='Section 3 compared with outdoor':
 
