@@ -11,6 +11,16 @@ import plotly.express as px
 # st.set_page_config(age_title='heat-stressed-poultry')
 st.set_page_config(layout="wide")
 
+mystyle = '''
+    <style>
+        p {
+            text-align: justify;
+        }
+    </style>
+    '''
+
+st.markdown(mystyle, unsafe_allow_html=True)
+
 @st.cache
 def readdata(file):
     van20all1 = pd.read_excel(file)
@@ -110,12 +120,12 @@ with header_container:
     st.subheader('Abstract submitted to the FORECAST Conference 2022')
 
     with st.expander("Research Background"):
-        st.write(
-            "This project reports on work done at the Vere Technical "
-            "High School chicken farm in Clarendon Jamaica. This chicken farm is used to supply meat to the school's "
-            "canteen, whose profitability was being threaten by high mortality. The research team with funding from "
-            "the Environmental Foundation of Jamaica provided assistance to the school to investigate the cause of "
-            "the high mortality and provide mitigation options.")
+        st.info(
+            """This project reports on work done at the Vere Technical 
+            High School chicken farm in Clarendon Jamaica. This chicken farm is used to supply meat to the school's
+            canteen, whose profitability was being threaten by high mortality. The research team with funding from 
+            the Environmental Foundation of Jamaica provided assistance to the school to investigate the cause of 
+            the high mortality and provide mitigation options.""")
         st.write(" ")
         st.write(
             " The growth of livestock such as chicken is affected by "
