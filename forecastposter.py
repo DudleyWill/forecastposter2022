@@ -188,8 +188,9 @@ with conclusion_container:
 
 
 with reference_container:
-    st.write ('[1] C. Lallo et al, “Characterizing heat stress on livestock using the temperature humidity index'
+    with st.expander('References'):
+        st.write ('[1] C. Lallo et al, “Characterizing heat stress on livestock using the temperature humidity index'
               '  (THI)—prospects for a warmer Caribbean” Regional Environmental Change,'
               ' vol. 18, , pp. 2329–2340, Dec.2018.')
-    st.write('[2] O.Omomowo, F. Falayi, “Temperature-humidity index and thermal comfort of broilers in humid'
+        st.write('[2] O.Omomowo, F. Falayi, “Temperature-humidity index and thermal comfort of broilers in humid'
              '  tropics” CIGR, vol.23(3): pp. 101-110, Sep 2021.')
