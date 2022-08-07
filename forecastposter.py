@@ -177,10 +177,10 @@ with historical_container:
             st.plotly_chart(fig, use_container_width=True)
             st.write(
                 """Shows the temperature inside of section 4, where no intervention was done, compared to outdoor 
-                temperature.  Indoor temperature got as high as 38 0\N{DEGREE SIGN} C in the day and maintains a
-                 2 0\N{DEGREE SIGN} C-4 0\N{DEGREE SIGN} temperature above outdoor ambient temperature. During the night 
-                 indoor temperature got as low as 21 0\N{DEGREE SIGN} C and normally achieve temperatures up to 
-                 2.5 0\N{DEGREE SIGN} lower than ambient outdoor temperature. 
+                temperature.  Indoor temperature got as high as 38 \N{DEGREE SIGN} C in the day and maintains a
+                 2 0\N{DEGREE SIGN} C-4 \N{DEGREE SIGN} temperature above outdoor ambient temperature. During the night 
+                 indoor temperature got as low as 21 \N{DEGREE SIGN} C and normally achieve temperatures up to 
+                 2.5 \N{DEGREE SIGN} lower than ambient outdoor temperature. 
                  outdoor by 5 AM. """ )
         elif graphs=='Section 3 compared with outdoor':
 
