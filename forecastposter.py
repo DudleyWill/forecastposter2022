@@ -111,11 +111,14 @@ with header_container:
 
     with st.expander("Research Background"):
         st.write(
-            "This project reports on work done at a chicken farm at the Vere Technical "
-            "High School in Clarendon Jamaica. This chicken farm is used to supply meat to the school's canteen."
-            "The profitability of the farm was being threaten by high mortality. The research team with funding from "
+            "This project reports on work done at the Vere Technical "
+            "High School chicken farm in Clarendon Jamaica. This chicken farm is used to supply meat to the school's "
+            "canteen, whose profitability was being threaten by high mortality. The research team with funding from "
             "the Environmental Foundation of Jamaica provided assistance to the school to investigate the cause of "
-            "the high and provide mitigation options. The growth of livestock such as chicken is affected by "
+            "the high mortality and provide mitigation options.")
+        st.write(" ")
+        st.write(
+            " The growth of livestock such as chicken is affected by "
             "temperature as it dictates the quantity of water lost through sweating and urination. Where a large"
             " number of livestock are kept in the same location, fans are used to control the temperature in the "
             "building, which becomes less effective with increasing temperatures from climate change. "
