@@ -137,8 +137,8 @@ with header_container:
             Small farmers instead rely on natural ventilation cooling to regulate indoor climate. Farms that depend on 
             natural ventilation are at the mercy of a climate that is changing and whose ambient temperature is 
             increasing. The lack of control of regulate the indoor climate at will results in Heat stress being the 
-            leading cause of high mortality and low production in small livestock farming in [1].   
-            This paper presents a field investigation into the heat stress problem at local small poultry. """)
+            leading cause of high mortality and low production in small livestock farming in [1]. This paper presents a
+             field investigation into the heat stress problem at local small poultry. """)
 
 with method_container:
     with st.expander('Experimental setup'):
