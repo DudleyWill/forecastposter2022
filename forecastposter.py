@@ -147,8 +147,15 @@ with method_container:
         with cola:
             st.write(
                 """A typical open ventilated poultry house, made of galvanized zinc roof, timber framing and meshed 
-                sides was chosen as the test site. Measuring instruments were installed inside to record temperature
-                 and humidity along with an external weather station. Baseline data was collected in 2019. 
+                sides was chosen as the test site. The poultry house has 4 sections which allows the 
+                the chickens to be transition to a different section fo the house at a given week of growing period.
+                Section 2 was out of commission therefore, once the chickens leave the brooding section they 
+                would section week 2-4 in Secton 3. They would then be held in section 4 until reaping. 
+                 Section 3 was chosen as the intervention site based on recommendation of the poultry farmer that 
+                 considers weeks 2-4 as the fattening and growing period. """)
+            st.write("""
+                 Measuring instruments were installed inside to record temperature and humidity along with an 
+                 external weather station. Baseline data was collected in 2019. 
                  A radiant barrier was installed in the ceiling of one section of the poultry house in 2020,
                   to reduce heat ingress from the  zinc roof. The Temperature Humidity Index (THI) was used to assess
                    the thermal comfort of the broiler chickens using Eqn.1 and the following THI classifications: 
@@ -215,12 +222,8 @@ with historical_container:
                   there are factors such as quality of chickens received and climatic conditions between 2019 and 
                   2020 that contributed.Notwithstanding, it is believed 
                  the radiant barrier contributed to the reduced deaths. January 2020 showed the greatest reduction in 
-                 deaths compared to the same period the previous year. 
-                  
-                 was not This studies The chickens will start in 
-                     'section 1 and will be moved to the other sections of the poultry house at a given week.
-                     Chickens would spend week 2-4 in sections 3. They would then be held in section 4 until reaping. 
-                       """)
+                 deaths compared to the same period the previous year.               
+                                        """)
 
 with conclusion_container:
     with st.expander('Conclusion'):
