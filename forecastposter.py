@@ -161,9 +161,8 @@ with method_container:
                    the thermal comfort of the broiler chickens using Eqn.1 and the following THI classifications: 
                    no stress < 26, heat-stressed 26-29 and severely stressed > 30 [2]. The project also explored
                     nighttime radiative cooling by modifying a solar water heater to reduce the temperature of
-                     30 gallons of water during the night with a 3W circulating pump.  
-                     This experiment was conducted at the Department of Physics of the University of the West Indies,
-                      Mona Campus.                 
+                     30 gallons of water during the night with a 3W circulating pump. This experiment was conducted at 
+                     the Department of Physics of the University of the West Indies, Mona Campus.                 
                      Eqn.1 THI = 0.85 ∗ T_drybulb + 0.15 ∗ T_wetbulb""")
         with colb:
             image4 = loadimage('inside.jpg')
