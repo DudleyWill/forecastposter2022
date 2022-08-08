@@ -234,10 +234,11 @@ with conclusion_container:
                  ' the number of hours spent in severe THI conditions. Methods that can '
                  'reduce the temperature of the air without being energy intensive '
                  'are needed to address the heat stress problems '
-                 'of small farmers. Based on preliminary results, radiative cooling could be a solution to reduce the '
-                 'temperature of the indoor air  temperature. Only a small scale prototype was tested due to limited'
-                 ' funding. It is an area for future work as rising global temperature require innovative climate '
-                 'sensitive solutions.')
+                 'of small farmers. Based on preliminary results from a small scale radiative cooling prototype, '
+                 'radiative cooling could be a solution to reduce the '
+                 'temperature of the indoor air  temperature. Limited funding prevented testing the prototype '
+                 'on the chicken farm. However, it is an area for future work as rising global temperature require '
+                 'innovative climate sensitive solutions.')
 
 
 with reference_container:
