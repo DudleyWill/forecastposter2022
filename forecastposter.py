@@ -181,7 +181,7 @@ with historical_container:
                  2 0\N{DEGREE SIGN} C-4 \N{DEGREE SIGN} temperature above outdoor ambient temperature. During the night 
                  indoor temperature got as low as 21 \N{DEGREE SIGN} C and normally achieve temperatures up to 
                  2.5 \N{DEGREE SIGN} lower than ambient outdoor temperature. 
-                 outdoor by 5 AM. """ )
+                  """ )
         elif graphs=='Section 3 compared with outdoor':
 
             fig2 = timeseries('Section3', 's3out')
@@ -190,7 +190,7 @@ with historical_container:
                 """Constrast the indoor temperature of section 3 that has the radiant barrier with outdoor temperatures.
                  Section 3 maintained a temperature difference of 0\N{DEGREE SIGN} C to 4\N{DEGREE SIGN} C in the 
                  daytime while section 4 went as high as ~5.6\N{DEGREE SIGN} C. Note worthy, section 4 achieved lower
-                temperatures during the night than section 3 """)
+                temperatures during the night than section 3. """)
         elif graphs =='Section 4 hourly THI':
             fig = graphs20('Sec4THI', 'Section4')
             st.plotly_chart(fig, use_container_width=True)
@@ -207,6 +207,20 @@ with historical_container:
         else:
             image1 = loadimage('chickendeath.png')
             st.image(image1)
+            st.write(
+                """The poultry house studied normally rears a batch of 500 chickens. Poultry are reared during the
+                 school year and explains the missing periods on the graph. The number of deaths is lower in 2020
+                 with the introduction of the radiant barrier in January 2020 compared to all overlapping periods. 
+                 This research does not attribute all the mortality reduction to the radiant barrier as
+                  there are factors such as quality of chickens received and climatic conditions between 2019 and 
+                  2020 that contributed.Notwithstanding, it is believed 
+                 the radiant barrier contributed to the reduced deaths. January 2020 showed the greatest reduction in 
+                 deaths compared to the same period the previous year. 
+                  
+                 was not This studies The chickens will start in 
+                     'section 1 and will be moved to the other sections of the poultry house at a given week.
+                     Chickens would spend week 2-4 in sections 3. They would then be held in section 4 until reaping. 
+                       """)
 
 with conclusion_container:
     with st.expander('Conclusion'):
