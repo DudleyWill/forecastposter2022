@@ -150,19 +150,20 @@ with method_container:
                 sides was chosen as the test site. The poultry house has 4 sections which allows the 
                 the chickens to be transition to a different section fo the house at a given week of growing period.
                 Section 2 was out of commission therefore, once the chickens leave the brooding section they 
-                would section week 2-4 in Secton 3. They would then be held in section 4 until reaping. 
+                would section weeks 2-4 in Secton 3. They would then be held in section 4 until reaping. 
                  Section 3 was chosen as the intervention site based on recommendation of the poultry farmer that 
                  considers weeks 2-4 as the fattening and growing period. """)
             st.write("""
                  Measuring instruments were installed inside to record temperature and humidity along with an 
                  external weather station. Baseline data was collected in 2019. 
-                 A radiant barrier was installed in the ceiling of one section of the poultry house in 2020,
+                 A radiant barrier was installed in the ceiling of section 3 of the poultry house in 2020,
                   to reduce heat ingress from the  zinc roof. The Temperature Humidity Index (THI) was used to assess
                    the thermal comfort of the broiler chickens using Eqn.1 and the following THI classifications: 
                    no stress < 26, heat-stressed 26-29 and severely stressed > 30 [2]. The project also explored
                     nighttime radiative cooling by modifying a solar water heater to reduce the temperature of
-                     30 gallons of water during the night with a 3W circulating pump. This experiment was conducted 
-                     at the Department of Physics of the University of the West Indies, Mona Campus. 
+                     30 gallons of water during the night with a 3W circulating pump.  
+                     This experiment was conducted at the Department of Physics of the University of the West Indies,
+                      Mona Campus.                 
                      Eqn.1 THI = 0.85 ∗ T_drybulb + 0.15 ∗ T_wetbulb""")
         with colb:
             image4 = loadimage('inside.jpg')
@@ -233,7 +234,10 @@ with conclusion_container:
                  ' the number of hours spent in severe THI conditions. Methods that can '
                  'reduce the temperature of the air without being energy intensive '
                  'are needed to address the heat stress problems '
-                 'of small farmers. Based')
+                 'of small farmers. Based on preliminary results, radiative cooling could be a solution to reduce the '
+                 'temperature of the indoor air  temperature. Only a small scale prototype was tested due to limited'
+                 ' funding. It is an area for future work as rising global temperature require innovative climate '
+                 'sensitive solutions.')
 
 
 with reference_container:
