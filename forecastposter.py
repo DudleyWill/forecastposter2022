@@ -75,7 +75,7 @@ def graphs20 (thi,section):
         #font_color="white",
         title_font_family="Times New Roman",
         #title_font_color="white",
-        legend_title_font_color="white",
+        #legend_title_font_color="white",
         # font_size=15
     )
     return  fig1
