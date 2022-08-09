@@ -208,25 +208,25 @@ with historical_container:
             fig = graphs20('Sec4THI', 'Section4')
             st.plotly_chart(fig, use_container_width=True)
             st.write(
-                'Shows the hourly variation of the temperature hunmidity index which is used to estimate the level of heat stress expereinced by '
-                'chickens in section 4 of the poultry house')
+                'The figure above shows the hourly variation of the temperature hunmidity index which is used to estimate the level of heat stress expereinced by '
+                'chickens in section 4 of the poultry house.')
         elif graphs =='Section 3 hourly THI':
 
             fig = graphs20('Sec3THI', 'Section3')
             st.plotly_chart(fig, use_container_width=True)
             st.write(
-                'Shows the hourly variation of temperature hunmidity index which is used to estimate the level of heat stress expereinced by '
-                'chickens in section 4 of the poultry house')
+                'The figure above shows the hourly variation of temperature hunmidity index which is used to estimate the level of heat stress expereinced by '
+                'chickens in section 3 of the poultry house.')
         else:
             image1 = loadimage('chickendeath.png')
             st.image(image1)
             st.write(
                 """The poultry house studied normally rears a batch of 500 chickens. Poultry are reared during the
-                 school year and explains the missing periods on the graph. The number of deaths is lower in 2020
+                 school year which explains the missing periods on the graph. The number of deaths is lower in 2020
                  with the introduction of the radiant barrier in January 2020 compared to all overlapping periods. 
                  This research does not attribute all the mortality reduction to the radiant barrier as
                   there are factors such as quality of chickens received and climatic conditions between 2019 and 
-                  2020 that contributed.Notwithstanding, it is believed 
+                  2020 that contributed. Notwithstanding, it is believed 
                  the radiant barrier contributed to the reduced deaths. January 2020 showed the greatest reduction in 
                  deaths compared to the same period the previous year.               
                                         """)
@@ -241,7 +241,7 @@ with conclusion_container:
                  'are needed to address the heat stress problems '
                  'of small farmers. Based on preliminary results from a small scale radiative cooling prototype, '
                  'radiative cooling could be a solution to reduce the '
-                 'temperature of the indoor air  temperature. Limited funding prevented testing the prototype '
+                 'indoor air  temperature. Limited funding prevented testing the prototype '
                  'on the chicken farm. However, it is an area for future work as rising global temperature require '
                  'innovative climate sensitive solutions.')
 
