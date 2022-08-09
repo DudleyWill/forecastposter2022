@@ -72,9 +72,9 @@ def graphs20 (thi,section):
     )
     fig1.update_layout(
         font_family="Arial Black",
-        font_color="white",
+        #font_color="white",
         title_font_family="Times New Roman",
-        title_font_color="white",
+        #title_font_color="white",
         legend_title_font_color="white",
         # font_size=15
     )
