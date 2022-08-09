@@ -41,13 +41,14 @@ historical_container = st.container()
 conclusion_container = st.container()
 reference_container = st.container()
 
+#70bb2a", "#ffb814", "#ff1120"
 def graphs20 (thi,section):
     fig1 = px.scatter(van20all, x='date', y='hour', color=thi,
                      labels={thi: section, 'hour': 'Time', 'date': 'Date'}
                      , marginal_y="box",
                      symbol=thi,
                      category_orders={thi: ['No stress', 'Heat stressed', 'Severely stressed']},
-                     color_discrete_sequence=["#70bb2a", "#ffb814", "#ff1120"], size_max=10,
+                     color_discrete_sequence=["#70bb2a", "#f59b42", "#ff1120"], size_max=10,
                      width=1300, height=600
 
                      )
@@ -129,16 +130,16 @@ with header_container:
         st.write(" ")
         st.write(
             """ Livestock such as poultry are reared for a period of 6 weeks before reaping. Poultry require different 
-            climatic conditions to thrive based on their age. Baby chickens needs artificial heating during their week.
-            There temperature of the chicken house in the following weeks should be gradually reduced until reaping [2].
-            Large commercial poultry farms achieve this through their automated climate controls systems and use of 
+            climatic conditions to thrive based on their age. Baby chickens needs artificial heating during their first 
+            seven days of life. The temperature of the chicken house in the following weeks should be gradually reduced until reaping [2].
+            Large commercial poultry farms achieve this through their automated climate control systems and use of 
             evaporative cooling technologies to regulate the indoor climate. Small farmers do not practice this growing 
             technique due to the high capital and operating cost which is not suitable for their small scale farms. 
             Small farmers instead rely on natural ventilation cooling to regulate indoor climate. Farms that depend on 
             natural ventilation are at the mercy of a climate that is changing and whose ambient temperature is 
-            increasing. The lack of control of regulate the indoor climate at will results in Heat stress being the 
-            leading cause of high mortality and low production in small livestock farming in [1]. This paper presents a
-             field investigation into the heat stress problem at local small poultry. """)
+            increasing. The lack of the ability to regulate the indoor climate will result in heat stress being the 
+            leading cause of high mortality and low production in small livestock farming [1]. This paper presents a
+             field investigation into the heat stress problem at a small local poultry farm. """)
 
 with method_container:
     with st.expander('Experimental setup'):
@@ -146,58 +147,63 @@ with method_container:
         cola, colb =st.columns(2)
         with cola:
             st.write(
-                """A typical open ventilated poultry house, made of galvanized zinc roof, timber framing and meshed 
-                sides was chosen as the test site. The poultry house has 4 sections which allows the 
-                the chickens to be transition to a different section fo the house at a given week of growing period.
-                Section 2 was out of commission therefore, once the chickens leave the brooding section they 
-                would section weeks 2-4 in Secton 3. They would then be held in section 4 until reaping. 
-                 Section 3 was chosen as the intervention site based on recommendation of the poultry farmer that 
+                """A typical open ventilated poultry house, possessing a galvanized zinc roof, timber framing and meshed 
+                sides was chosen as the test site. The poultry house has 4 sections which allow the 
+                chickens to be transitioned to a different section of the house at a given week of the growing period. 
+                Section 1 is used for brooding. Section 2 was out of commission; therefore, once the chickens leave 
+                the brooding section they 
+                would spend weeks 2-4 in Section 3. They would then be held in section 4 until reaping. 
+                 Section 3 was chosen as the intervention site based on the recommendation of the poultry farmer who 
                  considers weeks 2-4 as the fattening and growing period. """)
             st.write("""
                  Measuring instruments were installed inside to record temperature and humidity along with an 
                  external weather station. Baseline data was collected in 2019. 
-                 A radiant barrier was installed in the ceiling of section 3 of the poultry house in 2020,
+                 A radiant barrier was installed in the ceiling of Section 3 of the poultry house in 2020,
                   to reduce heat ingress from the  zinc roof. The Temperature Humidity Index (THI) was used to assess
                    the thermal comfort of the broiler chickens using Eqn.1 and the following THI classifications: 
                    no stress < 26, heat-stressed 26-29 and severely stressed > 30 [2]. The project also explored
                     nighttime radiative cooling by modifying a solar water heater to reduce the temperature of
                      30 gallons of water during the night with a 3W circulating pump. This experiment was conducted at 
-                     the Department of Physics of the University of the West Indies, Mona Campus.                 
-                     Eqn.1 THI = 0.85 ∗ T_drybulb + 0.15 ∗ T_wetbulb""")
+                     the Department of Physics of the University of the West Indies, Mona Campus.    
+                        """)
+
+            st.latex("Eqn.1 \  THI = 0.85 ∗ T_{drybulb} + 0.15 ∗ T_{wetbulb}")
         with colb:
             image4 = loadimage('inside.jpg')
             st.image(image4,caption='Radiant barrier installed in section 3 of the Poultry house. Direct sunlight heats'
-                                    ' up the floor on the left side in the morning focusing the chickens to migrate to '
+                                    ' up the floor on the left side in the morning forcing the chickens to migrate to '
                                     ' the other side')
 
 with historical_container:
     with st.expander(" Results for the Radiant Barrier intervention"):
         graphs = st.radio(" ",
-                          ('Section 4 compared with outdoor',
-                           'Section 3 compared with outdoor',
+                          ('Section 4 vs outdoor Temperature',
+                           'Section 3 vs outdoor Temperature',
                            'Section 4 hourly THI',
                            'Section 3 hourly THI',
                            'Chicken mortality stats')
                           ,horizontal=True)
-        if graphs =='Section 4 compared with outdoor':
+        if graphs =='Section 4 vs outdoor Temperature':
             fig = timeseries('Section4', 's4out')
             st.plotly_chart(fig, use_container_width=True)
             st.write(
-                """Shows the temperature inside of section 4, where no intervention was done, compared to outdoor 
-                temperature.  Indoor temperature got as high as 38 \N{DEGREE SIGN} C in the day and maintains a
-                 2 0\N{DEGREE SIGN} C-4 \N{DEGREE SIGN} temperature above outdoor ambient temperature. During the night 
-                 indoor temperature got as low as 21 \N{DEGREE SIGN} C and normally achieve temperatures up to 
-                 2.5 \N{DEGREE SIGN} lower than ambient outdoor temperature. 
+                """The figure shows the temperature inside of section 4, where no intervention was done, compared to outdoor 
+                temperature. The indoor temperature got as high as 38 \N{DEGREE SIGN} C in the day and maintains a
+                 2 \N{DEGREE SIGN} C- 4 \N{DEGREE SIGN}C temperature above outdoor ambient temperature. The reverse 
+                 occurs in the night where indoor temperature would eventually be lower than outdoor temperature by up 
+                 to 2.5\N{DEGREE SIGN} C.
+                 
                   """ )
-        elif graphs=='Section 3 compared with outdoor':
+        elif graphs=='Section 3 vs outdoor Temperature':
 
             fig2 = timeseries('Section3', 's3out')
             st.plotly_chart(fig2, use_container_width=True)
             st.write(
-                """Constrast the indoor temperature of section 3 that has the radiant barrier with outdoor temperatures.
+                """The figure above contrasts the indoor temperature of section 3 that has the radiant barrier with the
+                 outdoor temperature.
                  Section 3 maintained a temperature difference of 0\N{DEGREE SIGN} C to 4\N{DEGREE SIGN} C in the 
-                 daytime while section 4 went as high as ~5.6\N{DEGREE SIGN} C. Note worthy, section 4 achieved lower
-                temperatures during the night than section 3. """)
+                 daytime while section 4 went as high as ~5.6\N{DEGREE SIGN} C relative to the outdoor temperature. It is 
+                 seen where section 4 achieved lower temperatures during the night than section 3. """)
         elif graphs =='Section 4 hourly THI':
             fig = graphs20('Sec4THI', 'Section4')
             st.plotly_chart(fig, use_container_width=True)
