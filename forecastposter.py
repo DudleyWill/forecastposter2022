@@ -119,7 +119,7 @@ with header_container:
     st.title('NEARING A TIPPING POINT: HEAT-STRESS AND SMALL SCALE POULTRY FARMING IN JAMAICA')
     st.subheader('Abstract submitted to the FORECAST Conference 2022')
 
-    with st.expander(st.caption("Research Background")):
+    with st.expander("Research Background"):
         st.info(
             """This project reports on work done at the Vere Technical 
             High School chicken farm in Clarendon Jamaica. This chicken farm is used to supply meat to the school's
