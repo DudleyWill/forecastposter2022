@@ -48,7 +48,7 @@ def graphs20 (thi,section):
                      , marginal_y="box",
                      symbol=thi,
                      category_orders={thi: ['No stress', 'Heat stressed', 'Severely stressed']},
-                     color_discrete_sequence=["#70bb2a", "#f59b42", "#ff1120"], size_max=10,
+                     color_discrete_sequence=["blue", "#f59b42", "#ff1120"], size_max=10,
                      width=1300, height=600
 
                      )
