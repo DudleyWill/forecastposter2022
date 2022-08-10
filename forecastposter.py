@@ -39,6 +39,7 @@ header_container = st.container()
 method_container = st.container()
 historical_container = st.container()
 conclusion_container = st.container()
+acknowledgement_container = st.container()
 reference_container = st.container()
 
 #70bb2a", "#ffb814", "#ff1120"
@@ -245,7 +246,12 @@ with conclusion_container:
                  'on the chicken farm. However, it is an area for future work as rising global temperature require '
                  'innovative climate sensitive solutions.')
 
-
+with acknowledgement_container:
+    st.write("""
+    This work was funded by the Environmental Foundation of Jamaica (EFJ) in collaboration with the Ministry of 
+    Economic Growth and Job Creation (MEGJC), through funding of One Million Four Hundred Thousand United States 
+    Dollars (USD 1.4M) provided by the Inter-American Development Bank (IDB). 
+    """)
 with reference_container:
     with st.expander('References'):
         st.write ('[1] C. Lallo et al, “Characterizing heat stress on livestock using the temperature humidity index'
