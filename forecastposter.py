@@ -247,11 +247,13 @@ with conclusion_container:
                  'innovative climate sensitive solutions.')
 
 with acknowledgement_container:
-    st.write("""
-    This work was funded by the Environmental Foundation of Jamaica (EFJ) in collaboration with the Ministry of 
-    Economic Growth and Job Creation (MEGJC), through funding of One Million Four Hundred Thousand United States 
-    Dollars (USD 1.4M) provided by the Inter-American Development Bank (IDB). 
-    """)
+    with st.expander('Acknowledgement of Funders'):
+        st.write("""
+            This work was funded by the Environmental Foundation of Jamaica (EFJ) in collaboration with the Ministry of 
+            Economic Growth and Job Creation (MEGJC), through funding of One Million Four Hundred Thousand United States 
+            Dollars (USD 1.4M) provided by the Inter-American Development Bank (IDB). 
+            """)
+
 with reference_container:
     with st.expander('References'):
         st.write ('[1] C. Lallo et al, “Characterizing heat stress on livestock using the temperature humidity index'
