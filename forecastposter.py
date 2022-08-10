@@ -175,7 +175,7 @@ with method_container:
                                     ' the other side')
 
 with historical_container:
-    with st.expander(" Results for the Radiant Barrier intervention"):
+    with st.expander(" Results for the Radiant Barrier Intervention"):
         graphs = st.radio(" ",
                           ('Section 4 vs outdoor Temperature',
                            'Section 3 vs outdoor Temperature',
@@ -233,7 +233,7 @@ with historical_container:
 
 with conclusion_container:
     with st.expander('Conclusion'):
-        st.write('The radiant Barrier reduced convective and radiative  heating inside the Poultry farm. '
+        st.write('The radiant barrier reduced convective and radiative  heating inside the Poultry farm. '
                  'The section with the radiant barrier was on average 2 \N{DEGREE SIGN} C lower that the other sections.  '
                  'Improving the thermal performance of the building may not be sufficient to reduce'
                  ' the number of hours spent in severe THI conditions. Methods that can '
