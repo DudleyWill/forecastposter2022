@@ -176,7 +176,7 @@ with method_container:
                                     ' the other side')
 
 with historical_container:
-    with st.expander(" Results for the Radiant Barrier Intervention (click graphs to interact with the data"):
+    with st.expander(" Results for the Radiant Barrier Intervention (click graphs to interact with the data)"):
         graphs = st.radio(" ",
                           ('Section 4 vs outdoor Temperature',
                            'Section 3 vs outdoor Temperature',
